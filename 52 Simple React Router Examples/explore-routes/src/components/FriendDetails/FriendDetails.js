@@ -8,8 +8,7 @@ const FriendDetails = () => {
         <div>
             <h1>Details About: {friend.name}</h1>
             <p>Call him/her: {friend.phone}</p>
-            <h2>Evetything you need to know about this person</h2>
-            {/* 52-6 (Recap) Create Route and Load Data based on Route */}
+            <h2>Evetything you need to know about this person</h2>  
         </div>
     );
 };
