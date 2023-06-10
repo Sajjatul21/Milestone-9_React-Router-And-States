@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Products from './components/Products/Products';
 import Main from './layout/Main';
 import Friends from './components/Friends/Friends';
+import FriendDetails from './components/FriendDetails/FriendDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,7 +22,10 @@ function App() {
           },
           element: <Friends></Friends>
         },
-        { path: 'products', element: <Products></Products> }
+        { path: 'products', element: <Products></Products> },
+        {
+          path: '/friend/:friendId', element: <FriendDetails></FriendDetails>
+        }
       ]
     },
     { path: '*', element: <div>This route not fount.404</div> }
