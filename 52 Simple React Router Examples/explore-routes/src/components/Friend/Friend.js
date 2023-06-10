@@ -8,7 +8,7 @@ const Friend = ({ friend }) => {
         <div className='friend'>
             <h3>Name: {name}</h3>
             <p>Email: {email}</p>
-            <p><small>User Name: <Link>{username}</Link></small></p>
+            <p><small>User Name: <Link to='/friend'>{username}</Link></small></p>
         </div>
     );
 };
