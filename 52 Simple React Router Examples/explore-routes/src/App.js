@@ -14,7 +14,13 @@ function App() {
         { path: '/', element: <Home></Home> },
         { path: '/home', element: <Home></Home> },
         { path: '/about', element: <About></About> },
-        { path: 'friends', element: <Friends></Friends> },
+        {
+          path: 'friends',
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+          element: <Friends></Friends>
+        },
         { path: 'products', element: <Products></Products> }
       ]
     },
