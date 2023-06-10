@@ -18,6 +18,7 @@ function App() {
         { path: 'products', element: <Products></Products> }
       ]
     },
+    { path: '*', element: <div>This route not fount.404</div> }
 
   ]);
   return (
