@@ -6,7 +6,7 @@ const Friends = () => {
     console.log(friends);
     return (
         <div>
-            <h4>I have so many friends.YAY!!!!!</h4>
+            <h4>I have so many friends.YAY!!!!!: {friends.length}</h4>
         </div>
     );
 };
