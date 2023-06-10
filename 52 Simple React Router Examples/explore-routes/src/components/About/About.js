@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from '../Header/Header';
 
 const About = () => {
     return (
         <div>
+            <Header></Header>
             <h3>This is true Real About me page</h3>
         </div>
     );
