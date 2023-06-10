@@ -10,7 +10,7 @@ const Friend = ({ friend }) => {
             <p>Email: {email}</p>
             <p><small>User Name: <Link to={`/friend/${id}`}>{username}</Link></small></p>
             
-            {/*আমরা এখন  link make করে পেলছি  এবার  আমাদের route defination লাগবে আার link এর click করলে সে কোথায় যাবে সেটা লাগবে */}
+            
 
         </div>
     );
