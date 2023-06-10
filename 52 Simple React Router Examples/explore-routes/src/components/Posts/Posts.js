@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const Post = () => {
+const Posts = () => {
     const posts = useLoaderData();
     console.log(posts);
     return (
@@ -11,4 +11,4 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default Posts;

@@ -7,7 +7,7 @@ import Products from './components/Products/Products';
 import Main from './layout/Main';
 import Friends from './components/Friends/Friends';
 import FriendDetails from './components/FriendDetails/FriendDetails';
-import Post from './components/Post/Post';
+import Post from './components/Posts/Posts';
 
 function App() {
   const router = createBrowserRouter([
