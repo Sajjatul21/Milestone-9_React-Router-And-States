@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-
+      {/* 52-2 Create Simple Route with Links and Components */}
     </div>
   );
 }
