@@ -16,6 +16,7 @@ const Post = ({ post }) => {
                 <button>Show Details</button>
             </Link>
             <button onClick={handleNavigate}>Show Details2</button>
+            {/* 52-7 (Recap) Dynamic route, Dynamic Data loader and active route */}
         </div >
     );
 };
