@@ -35,6 +35,9 @@ function App() {
         },
         {
           path: 'posts',
+          loader: async () => {
+            return fetch('https://jsonplaceholder.typicode.com/posts');
+          },
           element: <Post></Post>
         }
       ]
