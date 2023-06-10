@@ -12,6 +12,7 @@ const Header = () => {
                 <Link to='/products'>Products</Link>
             </nav>
             <p>common Header</p>
+            {/* 52-4 Load Users, display users, dynamic link, Not Found */}
         </div>
     );
 };
