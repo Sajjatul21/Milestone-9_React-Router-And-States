@@ -26,8 +26,6 @@ function App() {
         {
           path: '/friend/:friendId',
           loader: async ({ params }) => {
-            console.log(params);
-            console.log(params.friendId);
             return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`);
           },
           element: <FriendDetails></FriendDetails>
