@@ -5,7 +5,7 @@ const Post = ({ post }) => {
     const { id, title, body } = post;
     const navigate = useNavigate();
     const handleNavigate = () => {
-
+        navigate(`/post/${id}`);
     };
     return (
         <div className='post'>
