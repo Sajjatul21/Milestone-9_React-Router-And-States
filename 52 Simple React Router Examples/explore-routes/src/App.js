@@ -7,6 +7,7 @@ import Products from './components/Products/Products';
 
 function App() {
   const router = createBrowserRouter([
+    { path: '/', element: <div>This is Default page</div> },
     { path: '/home', element: <Home></Home> },
     { path: '/about', element: <About></About> },
     { path: 'products', element: <Products></Products> }
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      {/* 52-3 (interesting) Nested route and outlet for shared content */}
     </div>
   );
 }
