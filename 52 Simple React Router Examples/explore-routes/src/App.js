@@ -43,6 +43,9 @@ function App() {
         },
         {
           path: '/post/:postId',
+          loader: async ({ params }) => {
+            return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);
+          },
           element: <PostDetails></PostDetails>
         }
       ]
