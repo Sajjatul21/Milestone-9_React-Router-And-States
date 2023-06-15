@@ -8,3 +8,8 @@
     background-color: lightcoral;
     border-radius: 3px;
 }
+
+.active {
+    background-color: plum;
+    border-radius: 5px;
+}
