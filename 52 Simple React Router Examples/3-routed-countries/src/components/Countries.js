@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Countries = () => {
+    const countries = useLoaderData();
     return (
         <div>
-            <h1>All Countries</h1>
+            <h1>All Countries {countries.length}</h1>
         </div>
     );
 };
