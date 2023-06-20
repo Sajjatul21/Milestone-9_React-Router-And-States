@@ -7,6 +7,6 @@ export const productsAndCartLoader = async () => {
 
     // get Cart
     const saveCart = getShoppingCart();
-    console.log(saveCart);
+    console.log("saveCrt", saveCart);
     return products;
 };
