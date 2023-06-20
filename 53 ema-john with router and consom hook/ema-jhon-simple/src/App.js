@@ -15,21 +15,22 @@ function App() {
         {
           path: '/',
           element: <Shop></Shop>
-        }, 
+        },
         {
           path: '/orders',
           element: <Orders></Orders>
         },
         {
-          path:'/inventory',
-          element:<Inventory></Inventory>
+          path: '/inventory',
+          element: <Inventory></Inventory>
+        },
+        {
+          path: 'about',
+          element: <About></About>
         }
       ]
     },
-    {
-      path: 'about',
-      element: <About></About>
-    }
+
   ]);
   return (
     <div>
