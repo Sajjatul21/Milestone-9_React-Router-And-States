@@ -4,12 +4,13 @@ export const productsAndCartLoader = async () => {
     const productData = await fetch('products.json');
     const products = await productData.json();
 
-    console.log("products:-", products);
+    // console.log("products:-", products);
 
     // get Cart
     const saveCart = getShoppingCart();
     for (const id in saveCart) {
-        console.log(id);
+        const addedProduct = products.find(product => product.id == id);
+        console.log(id, addedProduct);
     }
     return products;
 };
