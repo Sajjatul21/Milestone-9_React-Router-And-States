@@ -1,5 +1,6 @@
 import { getShoppingCart } from '../../utilities/fakedb';
-export const { productsAndCartLoader, previousCart } = async () => {
+
+export const productsAndCartLoader = async () => {
     // get Products
     const productData = await fetch('products.json');
     const products = await productData.json();

@@ -7,6 +7,7 @@ import Orders from './component/Orders/Orders';
 import Inventory from './component/Inventory/Inventory';
 import { productsAndCartLoader } from './component/loaders/productsAndCartLoader';
 
+
 function App() {
   const router = createBrowserRouter([
     {
