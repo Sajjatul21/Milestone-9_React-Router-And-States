@@ -3,6 +3,8 @@ import './App.css';
 import Main from "./layouts/Main";
 import About from './component/About/About';
 import Shop from './component/Shop/Shop';
+import Orders from './component/Orders/Orders';
+import Inventory from './component/Inventory/Inventory';
 
 function App() {
   const router = createBrowserRouter([
@@ -13,6 +15,14 @@ function App() {
         {
           path: '/',
           element: <Shop></Shop>
+        }, 
+        {
+          path: '/orders',
+          element: <Orders></Orders>
+        },
+        {
+          path:'/inventory',
+          element:<Inventory></Inventory>
         }
       ]
     },
