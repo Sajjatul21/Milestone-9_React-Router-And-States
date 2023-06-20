@@ -8,9 +8,10 @@ const Main = () => {
         <div>
             <Header></Header>
             <Outlet></Outlet>
-            
 
-        
+
+            {/* 53-3 Use Loader to load data and make it available in the component */}
+
 
         </div>
     );
