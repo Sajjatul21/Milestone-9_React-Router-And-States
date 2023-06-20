@@ -12,7 +12,8 @@ export const productsAndCartLoader = async () => {
         const addedProduct = products.find(product => product.id === id);
         console.log(addedProduct);
         if (addedProduct) {
-
+            const quantity = saveCart[id];
+            console.log(id, quantity);
         }
     }
     return products;
