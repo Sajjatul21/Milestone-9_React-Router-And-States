@@ -16,6 +16,9 @@ function App() {
           path: '/',
           loader: () => fetch('products.json'),
           element: <Shop></Shop>
+
+          // 53-4 Create products and saved cart loader and return multiple items
+
         },
         {
           path: '/orders',

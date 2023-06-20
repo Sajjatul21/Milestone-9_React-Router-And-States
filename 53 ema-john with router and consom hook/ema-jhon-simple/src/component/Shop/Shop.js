@@ -9,6 +9,7 @@ const Shop = () => {
     const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
+
     useEffect(() => {
         const storeCart = getShoppingCart();
         // console.log(storeCart)
