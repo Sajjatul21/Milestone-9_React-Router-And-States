@@ -8,12 +8,14 @@ export const productsAndCartLoader = async () => {
 
     // get Cart
     const saveCart = getShoppingCart();
+    const previousCart = [];
     for (const id in saveCart) {
         const addedProduct = products.find(product => product.id === id);
-        console.log(addedProduct);
+
         if (addedProduct) {
             const quantity = saveCart[id];
-            console.log(id, quantity);
+            addedProduct.quantity = quantity;
+            previousCart.push = addedProduct;
         }
     }
     return products;
