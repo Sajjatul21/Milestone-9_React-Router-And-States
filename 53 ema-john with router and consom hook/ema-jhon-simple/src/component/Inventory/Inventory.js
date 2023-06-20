@@ -5,7 +5,7 @@ const Inventory = () => {
         <div>
             <h2>This is Inventory</h2>
 
-            {/* 53-2 Recap React Router setup and intro to order review page */}
+          
 
         </div>
     );
