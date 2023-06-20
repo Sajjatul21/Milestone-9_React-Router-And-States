@@ -5,6 +5,7 @@ import About from './component/About/About';
 import Shop from './component/Shop/Shop';
 import Orders from './component/Orders/Orders';
 import Inventory from './component/Inventory/Inventory';
+import { productsAndCartLoader } from './component/loaders/productsAndCartLoader';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,13 +17,10 @@ function App() {
           path: '/',
           loader: () => fetch('products.json'),
           element: <Shop></Shop>
-
-          // 53-4 Create products and saved cart loader and return multiple items
-
         },
         {
           path: '/orders',
-          loader: () => fetch(`products.json`),
+          loader: productsAndCartLoader,
           element: <Orders></Orders>
         },
         {
