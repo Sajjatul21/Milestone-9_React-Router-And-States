@@ -18,7 +18,7 @@ export const { productsAndCartLoader, previousCart } = async () => {
             initialCart.push = addedProduct;
         }
     }
-    return { products, initialCart };
+    return { products: products, initialCart: initialCart };
 
 
 };
