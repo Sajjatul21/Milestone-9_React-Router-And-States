@@ -4,9 +4,12 @@ export const productsAndCartLoader = async () => {
     const productData = await fetch('products.json');
     const products = await productData.json();
 
+    console.log("products:-", products);
 
     // get Cart
     const saveCart = getShoppingCart();
-    console.log("saveCrt", saveCart);
+    for (const id in saveCart) {
+        console.log(id);
+    }
     return products;
 };
