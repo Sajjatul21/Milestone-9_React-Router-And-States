@@ -9,8 +9,11 @@ export const productsAndCartLoader = async () => {
     // get Cart
     const saveCart = getShoppingCart();
     for (const id in saveCart) {
-        const addedProduct = products.find(product => product.id == id);
-        console.log(id, addedProduct);
+        const addedProduct = products.find(product => product.id === id);
+        console.log(addedProduct);
+        if (addedProduct) {
+
+        }
     }
     return products;
 };
