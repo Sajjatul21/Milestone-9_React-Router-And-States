@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './Shop.css'
+import './Shop.css';
 import Proudct from '../Product/Proudct';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
-
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, []);
 
     useEffect(() => {
         const storeCart = getShoppingCart();
@@ -24,18 +19,18 @@ const Shop = () => {
             if (addedProduct) {
                 const quantity = storeCart[id];
                 addedProduct.quantity = quantity;
-                saveCart.push(addedProduct)
+                saveCart.push(addedProduct);
             }
         }
         setCart(saveCart);
-    }, [products])
+    }, [products]);
 
 
     const handleAddToCart = (selectedProduct) => {
         // console.log(selectedProduct)
 
         const exist = cart.find(product => product.id === selectedProduct.id);
-        console.log(exist)
+        console.log(exist);
         let newCart = [];
         if (!exist) {
             selectedProduct.quantity = 1;
@@ -54,7 +49,7 @@ const Shop = () => {
         setCart(newCart);
 
         addToDb(selectedProduct.id);
-    }
+    };
     return (
         <div className='shop-container'>
             <div className="products-container">
