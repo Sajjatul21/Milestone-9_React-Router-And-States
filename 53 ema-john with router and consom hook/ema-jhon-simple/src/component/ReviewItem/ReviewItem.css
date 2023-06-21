@@ -1,13 +1,20 @@
 .review-item {
     display: flex;
+    border: 1px solid rgba(149, 160, 167, 1);
+    width: 571px;
+    margin: 0 auto;
+    padding: 8px;
 }
 
 .review-details-container {
     display: flex;
+    margin-left: 17px;
 }
 
 .review-item img {
     width: 91px;
 }
 
-/* 53-7 More style of Review item and font awesome delete style */
+.review-details p {
+    margin: 0px;
+}
