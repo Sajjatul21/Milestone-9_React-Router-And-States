@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Orders = () => {
+    /* const orders = useLoaderData();
+    console.log(orders); */
     const { products, initialCart } = useLoaderData();
     const [cart, setCart] = useState(initialCart);
 
