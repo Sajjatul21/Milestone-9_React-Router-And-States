@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 
 const Orders = () => {
-    // google seact create react app module css
+
     const { products, initialCart } = useLoaderData();
     const [cart, setCart] = useState(initialCart);
 
     return (
-        <div>
-            <h2>This is Orders: {products.length}</h2>
-            <p>Inatial cart: {cart.length}</p>
+
+        <div className="shop-container">
+            <div className="products-container">
+
+            </div>
+            <div className="cart-container">
+                <Cart cart={cart}></Cart>
+            </div>
         </div>
+
     );
 };
 
