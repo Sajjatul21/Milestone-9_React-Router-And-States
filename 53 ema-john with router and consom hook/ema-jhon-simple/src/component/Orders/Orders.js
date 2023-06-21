@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
+import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Orders = () => {
 
@@ -8,10 +9,15 @@ const Orders = () => {
     const [cart, setCart] = useState(initialCart);
 
     return (
-        // 53-6 Implement Review Item style with a lot of flex
-        <div className="shop-container">
-            <div className="products-container">
 
+        <div className="shop-container">
+            <div className="orders-container">
+                {
+                    cart.map(product => <ReviewItem
+                        key={product.id}
+                        product={product}
+                    ></ReviewItem>)
+                }
             </div>
             <div className="cart-container">
                 <Cart cart={cart}></Cart>
