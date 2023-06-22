@@ -1,7 +1,7 @@
 import React from 'react';
-import './Cart.css'
+import './Cart.css';
 const Cart = (props) => {
-    const { cart } = props;
+    const { cart, clearCart } = props;
     // console.log(cart);
     let total = 0;
     let shipping = 0;
@@ -9,7 +9,7 @@ const Cart = (props) => {
     for (const product of cart) {
         quantity = quantity + product.quantity;
         total = total + product.price * product.quantity;
-        shipping = shipping + product.shipping
+        shipping = shipping + product.shipping;
     }
     const tax = parseFloat((total * 0.1).toFixed(2));
     const grandTotal = total + shipping + tax;
@@ -22,6 +22,7 @@ const Cart = (props) => {
             <p>Total Shipping: ${shipping}</p>
             <p>Tax: ${tax}</p>
             <h5>Grand Total: {grandTotal.toFixed(2)}</h5>
+            <button onClick={clearCart}>Clear Item</button>
         </div>
     );
 };

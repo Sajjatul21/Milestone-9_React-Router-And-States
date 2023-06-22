@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './Shop.css';
 import Proudct from '../Product/Proudct';
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
     const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    };
 
     useEffect(() => {
         const storeCart = getShoppingCart();
@@ -31,7 +35,7 @@ const Shop = () => {
         // console.log(selectedProduct)
 
         const exist = cart.find(product => product.id === selectedProduct.id);
-        console.log(exist);
+        // console.log(exist);
         let newCart = [];
         if (!exist) {
             selectedProduct.quantity = 1;
@@ -63,7 +67,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} clearCart={clearCart}></Cart>
 
             </div>
         </div>
