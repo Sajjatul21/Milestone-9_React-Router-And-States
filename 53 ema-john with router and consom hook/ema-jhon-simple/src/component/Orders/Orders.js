@@ -13,6 +13,8 @@ const Orders = () => {
         const remaining = cart.filter(product => product.id !== id);
         setCart(remaining);
         removeFromDb(id);
+
+        // 53-9 Module Summary, explore children props
     };
 
     return (
