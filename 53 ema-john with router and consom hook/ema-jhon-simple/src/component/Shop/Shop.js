@@ -3,7 +3,7 @@ import './Shop.css';
 import Proudct from '../Product/Proudct';
 import Cart from '../Cart/Cart';
 import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
     const products = useLoaderData();
@@ -67,7 +67,11 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart} clearCart={clearCart}></Cart>
+                <Cart cart={cart} clearCart={clearCart}>
+                    <Link to="/orders">
+                        <button>Review Orders</button>
+                    </Link>
+                </Cart>
 
             </div>
         </div>
