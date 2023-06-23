@@ -24,6 +24,10 @@ function App() {
   ]);
   return (
     <div className="App">
+
+      {/* 54-2 Display TShirts and style t-shirt components */}
+
+
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
