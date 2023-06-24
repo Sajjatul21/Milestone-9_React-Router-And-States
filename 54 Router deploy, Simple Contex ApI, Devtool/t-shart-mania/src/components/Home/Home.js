@@ -15,7 +15,7 @@ const Home = () => {
         else {
             const newCart = [...cart, tsharts];
             setCart(newCart);
-            alert("Sucessfully Added");
+            // alert("Sucessfully Added");
         }
     };
     return (
