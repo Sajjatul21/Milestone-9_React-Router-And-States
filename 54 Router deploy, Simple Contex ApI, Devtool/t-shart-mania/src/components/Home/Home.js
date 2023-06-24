@@ -1,11 +1,17 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import TShart from '../TShart/TShart';
 
 const Home = () => {
     const tsharts = useLoaderData();
     return (
         <div>
-            <h2>This is Home: {tsharts.length }</h2>
+            {
+                tsharts.map(tshart => <TShart
+                    key={tshart._id}
+                    tshart={tshart}
+                ></TShart>)
+            }
         </div>
     );
 };
