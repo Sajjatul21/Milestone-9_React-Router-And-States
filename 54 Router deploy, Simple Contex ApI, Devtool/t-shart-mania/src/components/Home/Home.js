@@ -6,6 +6,9 @@ import './Home.css';
 
 const Home = () => {
     const tsharts = useLoaderData();
+    const handleAddToCart = tsharts => {
+        console.log(tsharts);
+    };
     return (
         <div className='home-container'>
             <div className="t-shart-container">
@@ -13,6 +16,7 @@ const Home = () => {
                     tsharts.map(tshart => <TShart
                         key={tshart._id}
                         tshart={tshart}
+                        handleAddToCart={handleAddToCart}
                     ></TShart>)
                 }
             </div>
