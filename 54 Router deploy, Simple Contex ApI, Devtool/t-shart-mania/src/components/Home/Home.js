@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import TShart from '../TShirt/TShirt';
 import Cart from '../Cart/Cart';
@@ -6,8 +6,11 @@ import './Home.css';
 
 const Home = () => {
     const tsharts = useLoaderData();
+    const [cart, setCart] = useState([]);
     const handleAddToCart = tsharts => {
-        console.log(tsharts);
+        // const newCart =[];
+        const newCart = [...cart, tsharts];
+        setCart(newCart);
     };
     return (
         <div className='home-container'>
