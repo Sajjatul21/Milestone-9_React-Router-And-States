@@ -24,6 +24,9 @@ const Home = () => {
         // console.log(tshirt);
         const remaining = cart.filter(ts => ts._id !== tshirt._id);
         setCart(remaining);
+
+        // 54-4 Explore Conditional Rendering & conditional css class
+        
     };
 
     return (
