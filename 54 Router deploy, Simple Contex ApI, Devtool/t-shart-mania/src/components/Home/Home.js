@@ -1,7 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import TShart from '../TShart/TShart';
+import TShart from '../TShirt/TShirt';
 import Cart from '../Cart/Cart';
+import './Home.css';
 
 const Home = () => {
     const tsharts = useLoaderData();
