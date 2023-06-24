@@ -7,6 +7,7 @@ import './Home.css';
 const Home = () => {
     const tsharts = useLoaderData();
     const [cart, setCart] = useState([]);
+
     const handleAddToCart = tsharts => {
         const exeist = cart.find(ts => ts._id === tsharts._id);
         if (exeist) {
@@ -18,6 +19,13 @@ const Home = () => {
             // alert("Sucessfully Added");
         }
     };
+
+    const handleRemoveIems = tshirt => {
+        // console.log(tshirt);
+        const remaining = cart.filter(ts => ts._id !== tshirt._id);
+        setCart(remaining);
+    };
+
     return (
         <div className='home-container'>
             <div className="t-shart-container">
@@ -30,7 +38,7 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} handleRemoveIems={handleRemoveIems}></Cart>
             </div>
         </div>
     );
