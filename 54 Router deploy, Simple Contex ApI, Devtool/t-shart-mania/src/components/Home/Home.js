@@ -8,9 +8,15 @@ const Home = () => {
     const tsharts = useLoaderData();
     const [cart, setCart] = useState([]);
     const handleAddToCart = tsharts => {
-        // const newCart =[];
-        const newCart = [...cart, tsharts];
-        setCart(newCart);
+        const exeist = cart.find(ts => ts._id === tsharts._id);
+        if (exeist) {
+            alert('T-shirt already added');
+        }
+        else {
+            const newCart = [...cart, tsharts];
+            setCart(newCart);
+            alert("Sucessfully Added");
+        }
     };
     return (
         <div className='home-container'>
@@ -24,7 +30,7 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart ={cart}></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
