@@ -19,7 +19,7 @@ const Cart = ({ cart, handleRemoveIems }) => {
     return (
         <div>
             <h2 className={cart.length === 2 ? `orange` : 'purple'}>Orders Summary</h2>
-            <h5>Orders Quentity: {cart.length}</h5>
+            <h5 className={`bold ${cart.length === 2 ? 'blue' : 'yellow'}`}>Order Quantity: {cart.length}</h5>
             {
                 cart.map(tshirt => <p
                     key={tshirt._id}
@@ -39,7 +39,7 @@ const Cart = ({ cart, handleRemoveIems }) => {
         </div>
     );
 };
-    
+
 export default Cart;
 /* 
 Conditional Rendering 
