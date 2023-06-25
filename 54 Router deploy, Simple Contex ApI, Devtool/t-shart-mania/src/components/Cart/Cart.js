@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Cart.css';
 const Cart = ({ cart, handleRemoveIems }) => {
 
     let message;
@@ -18,7 +18,7 @@ const Cart = ({ cart, handleRemoveIems }) => {
     }
     return (
         <div>
-            <h2>Orders Summary</h2>
+            <h2 className={cart.length === 2 ? `orange` : 'purple'}>Orders Summary</h2>
             <h5>Orders Quentity: {cart.length}</h5>
             {
                 cart.map(tshirt => <p
@@ -39,7 +39,7 @@ const Cart = ({ cart, handleRemoveIems }) => {
         </div>
     );
 };
-
+    
 export default Cart;
 /* 
 Conditional Rendering 
