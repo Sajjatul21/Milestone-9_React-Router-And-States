@@ -32,6 +32,8 @@ const Cart = ({ cart, handleRemoveIems }) => {
                 message
             }
             {cart.length === 3 ? <p>Tin jon ke gift korba?</p> : <p>kino kino beshi kore kino</p>}
+            <p>And OPerator</p>
+            {cart.length === 2 && <h2>Double items</h2>}
         </div>
     );
 };
@@ -40,5 +42,6 @@ export default Cart;
 /* 
 Conditional Rendering 
     1. use element in a variable and then use  if-else to set value
-    2. ternary operator-> conditon ? true: false
+    2. ternary operator-> conditon ? true: fals
+    3. && operator
 */
