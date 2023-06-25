@@ -38,5 +38,5 @@ const Cart = ({ cart, handleRemoveIems }) => {
 export default Cart;
 /* 
 Conditional Rendering 
-    1. use element and if-else
+    1. use element in a variable and then use  if-else to set value
 */
