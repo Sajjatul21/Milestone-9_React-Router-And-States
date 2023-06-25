@@ -41,10 +41,17 @@ const Cart = ({ cart, handleRemoveIems }) => {
 };
 
 export default Cart;
-/* 
-Conditional Rendering 
+/*
+Conditional Rendering
     1. use element in a variable and then use  if-else to set value
     2. ternary operator-> conditon ? true: fals
     3. && operator (if conditiorn is true, i want ot display something)
     h. || operator (if conditon is false, i want ot display something)
 */
+
+/*
+    conditioal css
+*/
+
+
+// 54-5 Grandfather Create a Family Tree and share same data
