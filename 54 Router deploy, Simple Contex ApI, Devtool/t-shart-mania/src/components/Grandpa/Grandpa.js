@@ -6,11 +6,12 @@ import './Grandpa.css';
 
 const Grandpa = () => {
     const house = 7;
+    const ring = 'Diamond Ring';
     return (
         <div className='grandpa'>
             <h4>Grandpa</h4>
             <section className='flex'>
-                <Father house={house}></Father>
+                <Father house={house} ring={ring}></Father>
                 <Uncle house={house}></Uncle>
                 <Aunty house={house}></Aunty>
             </section>
