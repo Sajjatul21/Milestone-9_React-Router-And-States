@@ -3,7 +3,7 @@ import Father from '../Father/Father';
 import Uncle from '../Uncle/Uncle';
 import Aunty from '../Aunty/Aunty';
 import './Grandpa.css';
-    const RingContext = createContext('Matir Ring')
+const RingContext = createContext('Matir Ring');
 const Grandpa = () => {
     const house = 7;
     const ring = 'Diamond Ring';
@@ -18,6 +18,6 @@ const Grandpa = () => {
         </div>
     );
 };
-/* আমাদের grandpa->father->myself->special এ props drilling করে ডাটা পাঠানো অনেক inconvennient তাই আমরা context api use  করবে। https://react.dev/learn/passing-data-deeply-with-context  */
+/* 54-7 Simple Introduction to Context API to avoid Prop drilling */
 
 export default Grandpa;
