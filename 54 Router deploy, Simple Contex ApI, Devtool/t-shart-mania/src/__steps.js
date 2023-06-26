@@ -9,3 +9,9 @@ Basic Router Setup ->
     7. set Children routers
     8. set Link on the header component
 */
+
+/* 
+        Contaxt Api
+    1. Declare a context
+
+*/
