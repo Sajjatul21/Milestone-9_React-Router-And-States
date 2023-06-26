@@ -1,13 +1,13 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import Father from '../Father/Father';
 import Uncle from '../Uncle/Uncle';
 import Aunty from '../Aunty/Aunty';
 import './Grandpa.css';
 export const RingContext = createContext('Matir Ring');
 const Grandpa = () => {
-    const house = 7;
+    const [house, setHouse] = useState(1);
     return (
-        <RingContext.Provider value='Dadir Diamond Ring'>
+        <RingContext.Provider value={[house, setHouse]}>
             <div className='grandpa'>
                 <h4>Grandpa</h4>
                 <section className='flex'>
