@@ -4,18 +4,22 @@ import Uncle from '../Uncle/Uncle';
 import Aunty from '../Aunty/Aunty';
 import './Grandpa.css';
 export const RingContext = createContext('Matir Ring');
+export const MonuContext = createContext(555);
 const Grandpa = () => {
     const [house, setHouse] = useState(1);
+    const [mony, setMony] = useState(555);
     return (
         <RingContext.Provider value={[house, setHouse]}>
-            <div className='grandpa'>
-                <h4>Grandpa</h4>
-                <section className='flex'>
-                    <Father house={house}></Father>
-                    <Uncle house={house}></Uncle>
-                    <Aunty house={house}></Aunty>
-                </section>
-            </div>
+    <MonuContext.Provider value={mony}>
+                <div className='grandpa'>
+                    <h4>Grandpa</h4>
+                    <section className='flex'>
+                        <Father house={house}></Father>
+                        <Uncle house={house}></Uncle>
+                        <Aunty house={house}></Aunty>
+                    </section>
+                </div>
+            </MonuContext.Provider>
         </RingContext.Provider>
     );
 };
