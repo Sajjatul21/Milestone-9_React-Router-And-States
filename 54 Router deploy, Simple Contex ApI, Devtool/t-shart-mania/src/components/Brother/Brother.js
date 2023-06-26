@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Brother = () => {
+const Brother = ({ house }) => {
     return (
         <div>
             <h4>Brother</h4>
-            {/* 54-6 Prop Drilling to pass data to a many level components */}
+            <p><small>House: {house}</small></p>
         </div>
     );
 };
