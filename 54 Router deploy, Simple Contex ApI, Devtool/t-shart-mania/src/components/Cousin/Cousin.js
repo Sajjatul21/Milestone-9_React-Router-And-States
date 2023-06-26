@@ -1,4 +1,5 @@
 import React from 'react';
+import Friend from '../Friend/Friend';
 
 const Cousin = ({ house }) => {
     return (
@@ -7,6 +8,7 @@ const Cousin = ({ house }) => {
             {
                 <p><small>House: {house}</small></p>
             }
+            <Friend></Friend>
         </div>
     );
 };
