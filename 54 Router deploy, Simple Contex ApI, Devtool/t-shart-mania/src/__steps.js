@@ -13,5 +13,7 @@ Basic Router Setup ->
 /* 
         Contaxt Api
     1. Declare a context
+    2. set Provider with value
+    3. useContext
 
 */

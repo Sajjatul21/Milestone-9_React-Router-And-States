@@ -3,21 +3,21 @@ import Father from '../Father/Father';
 import Uncle from '../Uncle/Uncle';
 import Aunty from '../Aunty/Aunty';
 import './Grandpa.css';
-const RingContext = createContext('Matir Ring');
+export const RingContext = createContext('Matir Ring');
 const Grandpa = () => {
     const house = 7;
-    const ring = 'Diamond Ring';
     return (
-        <div className='grandpa'>
-            <h4>Grandpa</h4>
-            <section className='flex'>
-                <Father house={house} ring={ring}></Father>
-                <Uncle house={house}></Uncle>
-                <Aunty house={house}></Aunty>
-            </section>
-        </div>
+        <RingContext.Provider value='Dadir Diamond Ring'>
+            <div className='grandpa'>
+                <h4>Grandpa</h4>
+                <section className='flex'>
+                    <Father house={house}></Father>
+                    <Uncle house={house}></Uncle>
+                    <Aunty house={house}></Aunty>
+                </section>
+            </div>
+        </RingContext.Provider>
     );
 };
-/* 54-7 Simple Introduction to Context API to avoid Prop drilling */
 
 export default Grandpa;
