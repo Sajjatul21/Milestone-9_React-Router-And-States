@@ -10,7 +10,7 @@ const Grandpa = () => {
     const [mony, setMony] = useState(555);
     return (
         <RingContext.Provider value={[house, setHouse]}>
-    <MonuContext.Provider value={mony}>
+            <MonuContext.Provider value={[mony, setMony]}>
                 <div className='grandpa'>
                     <h4>Grandpa</h4>
                     <section className='flex'>
