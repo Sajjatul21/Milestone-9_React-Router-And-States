@@ -8,8 +8,11 @@ const addToDb = (id) => {
     shoppingCart = JSON.parse(storedCart);
   }
 
-  // add quantity
+  // add quantity  
   const quantity = shoppingCart[id];
+  
+  // const quantity = shoppingCart.id;
+
   if (quantity) {
     const newQuantity = quantity + 1;
     shoppingCart[id] = newQuantity;
