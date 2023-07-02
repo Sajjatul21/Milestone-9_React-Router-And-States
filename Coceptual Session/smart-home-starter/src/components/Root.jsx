@@ -3,15 +3,15 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
-const ProductContext = createContext([]);
+export const ProductContext = createContext([]);
 
 const Root = () => {
 
     const products = useLoaderData();
-    console.log(products);
+
 
     return (
-        <ProductContext.Provider value={[]}>
+        <ProductContext.Provider value={products}>
             <div>
                 <Header></Header>
                 <Outlet></Outlet>
