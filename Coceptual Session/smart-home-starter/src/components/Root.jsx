@@ -1,13 +1,13 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
 export const ProductContext = createContext([]);
-
+export const CartContext = createContext([]);
 const Root = () => {
-
-    const products = useLoaderData();
+    const { products, inatialCart } = useLoaderData();
+    const [cart, setCart] = useState(inatialCart);
 
 
     return (
