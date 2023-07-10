@@ -9,6 +9,7 @@ const Root = () => {
     const { products, initialCart } = useLoaderData();
     const [cart, setCart] = useState(initialCart);
 
+console.log()
 
     return (
         <ProductContext.Provider value={products}>

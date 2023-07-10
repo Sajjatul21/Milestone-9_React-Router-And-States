@@ -2,9 +2,18 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './Root';
 import CartItem from './CartItem';
+import { removeFromDb } from '../utils/fakeDB';
+import { toast } from 'react-toastify';
+
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
+  const handleRemoveItem = id => {
+    const remaining = cart.filter(product => product.id !== id);
+    setCart(remaining);
+    removeFromDb(id);
+    toast.warning('Product Removed!', { autoClose: 5000 });
+  };
 
   return (
     <div className='flex min-h-screen items-start justify-center bg-gray-100 text-gray-900'>
@@ -14,7 +23,7 @@ const Cart = () => {
         </h2>
         <ul className='flex flex-col divide-y divide-gray-700'>
           {
-            cart.map(product => <CartItem key={product.id} product={product}></CartItem>)
+            cart.map(product => <CartItem key={product.id} product={product} handleRemoveItem={handleRemoveItem}></CartItem>)
           }
         </ul>
         <div className='space-y-1 text-right'>
