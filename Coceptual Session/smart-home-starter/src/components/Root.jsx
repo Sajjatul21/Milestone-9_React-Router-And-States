@@ -12,11 +12,13 @@ const Root = () => {
 
     return (
         <ProductContext.Provider value={products}>
-            <div>
-                <Header></Header>
-                <Outlet></Outlet>
-                <Footer></Footer>
-            </div>
+            <CartContext.Provider value={[cart, setCart]}>
+                <div>
+                    <Header></Header>
+                    <Outlet></Outlet>
+                    <Footer></Footer>
+                </div>
+            </CartContext.Provider>
         </ProductContext.Provider>
     );
 };
