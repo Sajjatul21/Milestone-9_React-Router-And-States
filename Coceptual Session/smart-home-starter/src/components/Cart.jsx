@@ -2,17 +2,27 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './Root';
 import CartItem from './CartItem';
-import { removeFromDb } from '../utils/fakeDB';
+import { deleteShoppingCart, removeFromDb } from '../utils/fakeDB';
 import { toast } from 'react-toastify';
 
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
+
   const handleRemoveItem = id => {
     const remaining = cart.filter(product => product.id !== id);
     setCart(remaining);
     removeFromDb(id);
     toast.warning('Product Removed!', { autoClose: 5000 });
+  };
+
+  const orderHandler = () => {
+    if (cart.length) {
+      setCart([]);
+      deleteShoppingCart();
+      return toast.success('order placed', { autoClose: 500 });
+    }
+    return toast.error("Cart is empty. Please! Shop Around🙂");
   };
 
   let total = 0;
@@ -49,6 +59,7 @@ const Cart = () => {
             </button>
           </Link>
           <button
+            onClick={orderHandler}
             type='button'
             className='px-6 py-2 border font-semibold rounded-full hover:bg-cyan-400 bg-cyan-200 text-gray-800'
           >
