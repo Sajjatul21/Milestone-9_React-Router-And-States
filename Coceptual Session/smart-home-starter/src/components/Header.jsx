@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from './Root';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [cart, setCart] = useContext(CartContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='relative flex items-center justify-between'>
@@ -52,7 +55,10 @@ const Header = () => {
               title='Cart'
               className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
             >
-              <p> Cart</p>
+              <div className='relative py-2'>
+                <p> Cart</p>
+                <p className='absolute bottom-5 left-7'>{cart.length}</p>
+              </div>
             </Link>
           </li>
           <li>
@@ -147,7 +153,10 @@ const Header = () => {
                         title='Cart'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                       >
-                        <p> Cart</p>
+                        <div className='relative py-2'>
+                          <p> Cart</p>
+                          <p className='absolute bottom-5 left-7'>{cart.length}</p>
+                        </div>
                       </Link>
                     </li>
                     <li>
@@ -168,7 +177,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
