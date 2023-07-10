@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { CartContext } from './Root';
 
 const Cart = () => {
-  const cart = []
-
+  const [cart, setCart] = useContext(CartContext);
+  console.log(cart);
   return (
     <div className='flex min-h-screen items-start justify-center bg-gray-100 text-gray-900'>
       <div className='flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 '>
@@ -38,7 +39,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

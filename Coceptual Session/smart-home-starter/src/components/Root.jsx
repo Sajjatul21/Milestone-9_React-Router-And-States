@@ -6,8 +6,8 @@ import Footer from './Footer';
 export const ProductContext = createContext([]);
 export const CartContext = createContext([]);
 const Root = () => {
-    const { products, inatialCart } = useLoaderData();
-    const [cart, setCart] = useState(inatialCart);
+    const { products, initialCart } = useLoaderData();
+    const [cart, setCart] = useState(initialCart);
 
 
     return (
