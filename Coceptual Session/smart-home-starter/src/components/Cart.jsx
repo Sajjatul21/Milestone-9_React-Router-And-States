@@ -5,7 +5,7 @@ import { CartContext } from './Root';
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
-  console.log(cart);
+
   return (
     <div className='flex min-h-screen items-start justify-center bg-gray-100 text-gray-900'>
       <div className='flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 '>

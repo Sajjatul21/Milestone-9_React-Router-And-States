@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const Shop = () => {
   const products = useContext(ProductContext);
   const [cart, setCart] = useState([]);
+  console.log(cart);
 
   const handleAddToCart = (product) => {
     let newCart = [];
@@ -20,7 +21,7 @@ const Shop = () => {
     else {
       const rest = cart.filter(existingProducts => existingProducts.id !== product.id);
       exist.quantity = exist.quantity + 1;
-      
+
       newCart = [...rest, exist];
     }
     setCart(newCart);
