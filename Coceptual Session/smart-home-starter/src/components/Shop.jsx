@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 const Shop = () => {
   const products = useContext(ProductContext);
   const [cart, setCart] = useContext(CartContext);
-  console.log(cart);
 
   const handleAddToCart = (product) => {
     let newCart = [];
