@@ -23,3 +23,6 @@ app.get('/phones/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`Iphone server is running on port:${port}`);
 });
+
+//আমরা এবার phone-hunter-client নামে একটা react app বানাবো 
+// আমরা এখানে আমরা যে phones api make করলাম আমরা এখান থেকে ডাটা লোড করবো  
