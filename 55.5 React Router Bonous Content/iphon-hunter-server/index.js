@@ -12,8 +12,12 @@ app.get('/phones', (req, res) => {
 });
 
 app.get('/phones/:id', (req, res) => {
-    const id = req.params.id;
+    // const id = (req.params.id);
+    const id = parseInt(req.params.id);  // data comes stringify convert it the number use parseInt
     console.log('Looking data for: ', id);
+
+    const phone = phones.find(ph => ph.id === id) || {};
+    res.send(phone);
 });
 
 app.listen(port, () => {
