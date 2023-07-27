@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const phones = require('./phones.json');
 const port = 5000;
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Look mama nodemon!!! Iphone server running');
@@ -24,5 +27,3 @@ app.listen(port, () => {
     console.log(`Iphone server is running on port:${port}`);
 });
 
-//আমরা এবার phone-hunter-client নামে একটা react app বানাবো 
-// আমরা এখানে আমরা যে phones api make করলাম আমরা এখান থেকে ডাটা লোড করবো  

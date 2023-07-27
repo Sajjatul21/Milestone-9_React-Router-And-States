@@ -10,7 +10,7 @@ function App() {
       children: [
         {
           path: '/',
-          loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+          loader: () => fetch('http://localhost:5000/phones'),
           element: <Home></Home>
         }
       ]
