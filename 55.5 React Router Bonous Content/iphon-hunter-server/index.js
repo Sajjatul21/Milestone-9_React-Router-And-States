@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const phones = require('./phones.json');
 const port = 5000;
 
 app.get('/', (req, res) => {
@@ -7,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/phones', (req, res) => {
-    res.send('Phone data is coming soon!');
+    res.send(phones);
 });
 
 app.listen(port, () => {
