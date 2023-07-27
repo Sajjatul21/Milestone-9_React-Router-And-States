@@ -11,6 +11,11 @@ app.get('/phones', (req, res) => {
     res.send(phones);
 });
 
+app.get('/phones/:id', (req, res) => {
+    const id = req.params.id;
+    console.log('Looking data for: ', id);
+});
+
 app.listen(port, () => {
     console.log(`Iphone server is running on port:${port}`);
 });
